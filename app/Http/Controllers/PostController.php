@@ -10,6 +10,9 @@ class PostController extends Controller
 {
     public function __construct()
     {  
+        // Only authenticated user is allowed to create/update and delete a post
+        // Using construct function here in PostController
+        // It will protect all the routes from navigating in address bar
         $this->middleware('auth');
     }
 
