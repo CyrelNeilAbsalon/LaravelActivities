@@ -5,6 +5,8 @@ namespace Illuminate\Container;
 use ArrayAccess;
 use Closure;
 use Exception;
+use App\Models\Post;
+use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Container\Container as ContainerContract;
 use LogicException;

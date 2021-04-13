@@ -20,3 +20,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/users', 'UserControlller@index')->name('users');
+// Route::get('/users', [UserControlller::class, 'index'])->name('users');
+Route::post('/users', 'UserControlller@store')->name('user.store');
+// Route::post('/users', [UserControlller::class, 'store'])->name('user.store');
+Route::get('/users/create', 'UserControlller@create');
+// Route::post('/users/create', [UserControlller::class, 'create']);
+Route::get('/users/{id}', 'UserControlller@show')->name('users.show');
+// Route::post('/users/{id}', [UserControlller::class, 'show'])->name('user.show');
+
+Route::resource('/posts', App\Http\Controllers\PostController::class);
